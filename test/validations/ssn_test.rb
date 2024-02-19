@@ -51,7 +51,7 @@ describe "SSN validations" do
 
     describe "for valid" do
       it "supports deprecated usa_ssn syntax" do
-        assert_deprecated do
+        assert_deprecated ActiveSupport::Deprecation._instance do
           subject = build_ssn_record({:ssn => '444556666'}, {:type => :usa_ssn})
           _(subject.valid?).must_equal(true)
         end

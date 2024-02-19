@@ -2,6 +2,7 @@ gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/mock'
 old_w, $-w = $-w, false
+require 'active_support'
 require 'active_support/test_case'
 $-w = old_w
 require 'activevalidators'

@@ -48,7 +48,7 @@ describe "Credit Card Validation" do
         { card: '3800 0000 0000 06' },
         { type: :carte_blanche },
       )
-      assert_deprecated do
+      assert_deprecated ActiveSupport::Deprecation._instance do
         card_is_valid?(subject)
       end
     end
